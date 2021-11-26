@@ -28,8 +28,16 @@ def select_language():
 
     if selected_lang.upper() == "PL":
         config.selected_language = LanguagePl()
+        # START print some stuff for learning purposes
+        print(f"\nStworzyłeś obiekt:\n{type(config.selected_language)}\nwywołanie metody:\n"
+              f"{config.selected_language.get_selected_lang}\nzwraca:\n{config.selected_language.get_selected_lang()}\n")
+        # END print some stuff for learning purposes
     elif selected_lang.upper() == "EN":
         config.selected_language = LanguageEn()
+        # START print some stuff for learning purposes
+        print(f"\nStworzyłeś obiekt:\n{type(config.selected_language)}\nwywołanie metody:\n"
+              f"{config.selected_language.get_selected_lang}\nzwraca:\n{config.selected_language.get_selected_lang()}\n")
+        # END print some stuff for learning purposes
     else:
         print(f"{config.selected_language.get_wrong_option_info()} - \"{selected_lang}\" option not available.")
         select_language()
