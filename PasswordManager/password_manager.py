@@ -1,5 +1,8 @@
 import os
 
+import config
+import app
+
 
 def add():
     # implement a method which gets two inputs from user: Username and Password,
@@ -19,15 +22,15 @@ def view():
     pass
 
 
-while True:
-    mode = input("Would you like to add a new password or view existing ones (view, add), type q to quit ")
+def passwords_menu():
+    mode = input(config.selected_language.get_passwords_menu_info())
     if mode == "q":
-        break
+        app.main_menu()
 
     if mode == "view":
         view()
     elif mode == "add":
         add()
     else:
-        print("Invalid mode")
-        continue
+        print(config.selected_language.get_wrong_option_info())
+        passwords_menu()
