@@ -1,5 +1,5 @@
 import os
-
+dupa = 1
 plik = open('password', 'w')
 userName = input("Please insert your Username: ")
 plik.write("Please insert your Username: " "|" + userName)
