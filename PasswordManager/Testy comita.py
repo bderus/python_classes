@@ -1,13 +1,16 @@
-import os
-dupa = 1
-plik = open('password', 'w')
-userName = input("Please insert your Username: ")
-plik.write("Please insert your Username: " "|" + userName)
 
-password = input("Please insert your Password: ")
-plik.write("Please insert your Password: " "|" + password)
+def add(userName, password):
+    plik = open('password', 'w')
+    userName = input("Please insert your Username: ")
+    plik.write("Username: " + userName + "\n")
 
-def add():
+    password = input("Please insert your Password: ")
+    plik.write("Password: " + password)
+    pass
+
+
+
+#def add():
 
 
     # implement a method which gets two inputs from user: Username and Password,
