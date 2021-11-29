@@ -1,5 +1,5 @@
 
-def add(userName, password):
+def add():
     plik = open('password', 'w')
     userName = input("Please insert your Username: ")
     plik.write("Username: " + userName + "\n")
