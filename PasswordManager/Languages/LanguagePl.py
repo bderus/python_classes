@@ -8,8 +8,10 @@ class LanguagePl(Language):
     def print_main_menu_options(self):
         print("Witaj w App, wybierz jedną opcję z poniższego menu: ")
         print("1. Password Manager menu")
-        print("2. Wybierz język")
-        print("3. Exit App")
+        print("2. Kółko i krzyżyk - Maciek")
+        print("3. Kółko i krzyżyk - Piotrek")
+        print("4. Wybierz język")
+        print("5. Exit App")
 
     def get_wrong_option_info(self):
         return "Nierozpoznana opcja"

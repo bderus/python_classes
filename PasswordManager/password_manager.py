@@ -9,6 +9,7 @@ def add():
          userName = input("Please insert your Username: ")
          password = input("Please insert your Password: ")
          plik.write(userName + "|" + password + "\n")
+    passwords_menu()
 
 
 def view():

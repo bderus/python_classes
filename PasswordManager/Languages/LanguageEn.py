@@ -8,8 +8,10 @@ class LanguageEn(Language):
     def print_main_menu_options(self):
         print("Welcome to App, please select one option from menu below: ")
         print("1. Password Manager menu")
-        print("2. Choose language")
-        print("3. Exit App")
+        print("2. Tic tac toe - Maciek")
+        print("3. Tic tac toe - Piotrek")
+        print("4. Choose language")
+        print("5. Exit App")
 
     def get_wrong_option_info(self):
         return "Invalid option"
