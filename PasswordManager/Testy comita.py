@@ -18,4 +18,4 @@ def add(userName, password):
     # the data should be saved in new line, separated by pipe sign, like: <name>|<pass>
     # the method should create the file if it doesn't exist
     # the method doesn't return anything
-    pass
+    # pass
