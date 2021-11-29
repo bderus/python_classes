@@ -2,13 +2,10 @@ import os
 
 
 def add():
-    plik = open('password', 'w')
-    userName = input("Please insert your Username: ")
-    plik.write("Username: " + userName + "\n")
-
-    password = input("Please insert your Password: ")
-    plik.write("Password: " + password)
-
+    with open('password.txt', 'a') as plik:
+         userName = input("Please insert your Username: ")
+         password = input("Please insert your Password: ")
+         plik.write(userName + "|" + password + "\n")
 
 
 def view():
