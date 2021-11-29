@@ -30,5 +30,4 @@ while True:
         add()
     else:
         print("Invalid mode")
-        file = open("password.txt", "w")
         continue
