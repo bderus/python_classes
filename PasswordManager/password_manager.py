@@ -1,4 +1,4 @@
-import sys
+import os
 
 
 def add():
@@ -11,20 +11,13 @@ def add():
 
 
 def view():
-
-    try:
-        check = open('password', 'r')
-    except OSError:
-        print('Error plik nie istnieije ')
-        sys.exit()
-
-    plik = open('password')
-    curses = 'red'
-    for linia in plik:
-        print(linia)
-
-
-
+    x = os.path.exists("password.txt")
+    if x == True:
+        with open('password.txt', 'r') as file:
+            for linia in file:
+                print(linia)
+    else:
+        print("plik nie istnieje")
 
 while True:
     mode = input("Would you like to add a new password or view existing ones (view, add), type q to quit ")
@@ -37,5 +30,5 @@ while True:
         add()
     else:
         print("Invalid mode")
+        file = open("password.txt", "w")
         continue
-        file = open("password", "a")
