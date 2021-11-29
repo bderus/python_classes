@@ -9,13 +9,13 @@ def add():
 
 
 def view():
-    # implement a method which reads the file passwords.txt,
-    # and then shows all Usernames and Password that are stored in it
-    # in a nice formatted way, like Username: <name> | Password: <password>
-    # the method should first check if the file exists
-    # the method doesn't return anything
-    pass
-
+    x = os.path.exists("password.txt")
+    if x == True:
+        with open('password.txt', 'r') as file:
+            for linia in file:
+                print(linia)
+    else:
+        print("plik nie istnieje")
 
 
 while True:
