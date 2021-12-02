@@ -1,4 +1,4 @@
-import app
+"""import app
 
 board = [[1,2,3],
          [1,2,3],
@@ -13,9 +13,9 @@ else:
 
 playerChoice = input("Wybierz 1, aby rozpocząć grę, wybierz 2, aby wrócić do wyboru menu: ")
 
-def gameBoard():
-    for numeracjaPionowa, el in enumerate(board):
-        print(numeracjaPionowa, el)
+def gameBoard(player, row, column):
+    for count, row in enumerate(board):
+        print(numeracjaPionowa, row)
 
 if playerChoice == "1":
     print("Rozpoczyna gracz pierwszy ")
@@ -25,8 +25,22 @@ if playerChoice == "1":
 
 else:
     app.main_menu()
+"""
+board = [["*","*","*"],
+         ["*","*","*"],
+         ["*","*","*"]]
+def gameBoard(player=0, row=0, column=0):
+    print("    0    1    2")
 
+    board[row][column] = player
+    for count, row in enumerate(board):
+        print(count, row)
+playerChoice = input("Wybierz X lub O: ")
+playerChoicerow = input("Wybierz wiersz: ")
+playerChoicecolumn = input("Wybierz kolumnę: ")
 
+if gameBoard(playerChoice,int(playerChoicerow),int(playerChoicecolumn)):
+    print(board)
 
 
 
