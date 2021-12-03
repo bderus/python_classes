@@ -29,19 +29,26 @@ else:
 board = [["*","*","*"],
          ["*","*","*"],
          ["*","*","*"]]
+print("    0    1    2")
+
+for count, row in enumerate(board):
+    print(count, row)
+
 def gameBoard(player=0, row=0, column=0):
     print("    0    1    2")
 
     board[row][column] = player
     for count, row in enumerate(board):
         print(count, row)
-playerChoice = input("Wybierz X lub O: ")
-playerChoicerow = input("Wybierz wiersz: ")
-playerChoicecolumn = input("Wybierz kolumnę: ")
 
-if gameBoard(playerChoice,int(playerChoicerow),int(playerChoicecolumn)):
-    print(board)
+while True:
+    playerChoice = input("Wybierz X lub O: ")
+    playerChoicerow = input("Wybierz wiersz: ")
+    playerChoicecolumn = input("Wybierz kolumnę: ")
 
+    if gameBoard(playerChoice,int(playerChoicerow),int(playerChoicecolumn)):
+        print(board)
+    
 
 
 
