@@ -13,3 +13,8 @@ def TicTacToeMenu():
 
     if user_option == "1":
         StartGame()
+
+
+lista = [[0,0,0],[0,0,0],[0,0,0]]
+    for i in lista
+        print(lista)
