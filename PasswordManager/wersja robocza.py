@@ -7,11 +7,15 @@ for count, row in enumerate(board):
     print(count, row)
 
 def gameBoard(player=0, row=0, column=0):
-    print("    0    1    2")
+    if board[row][column] != "X" and board[row][column] != "0":
+        print("    0    1    2")
 
-    board[row][column] = player
-    for count, row in enumerate(board):
-        print(count, row)
+        board[row][column] = player
+        for count, row in enumerate(board):
+            print(count, row)
+    else:
+        print("To pole jest już zajęte ")
+
 def gameScheme():
 
     while True:
